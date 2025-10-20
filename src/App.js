@@ -1,12 +1,12 @@
+//THIS VERSION SHOULD WORK. THAT WOULD BE NICE.
+
 import './App.css';
 import ToBeReadTracker from './ToBeReadTracker';
 import BookForm from "./components/BookForm";
-// import BookList from "./components/BookList";
-// import CompletedList from "./components/CompletedList";
-// import { getBooks, addBook, updateBook, deleteBook } from "./api";
 import { useState } from "react";
 
 function App() {
+
   const [books, setBooks] = useState([]);
 
   function addBook(book) {

@@ -14,7 +14,8 @@ function ToBeReadTracker(){
     <div>
       <input
       type ="text"
-      placeholder="Enter a title: " />
+      placeholder="Enter a title: "
+      value="newBook"/>
     </div>
     
     </div>)
