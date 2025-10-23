@@ -2,9 +2,12 @@ import './App.css';
 import BookForm from "./components/BookForm";
 import { useState, useEffect } from "react";
 import { getBooks, addBook, updateBook, deleteBook } from "./BookAPI";
+import ToBeReadTracker from "./components/TBR TRACKER/ToBeReadTracker.jsx";
+
 
 //// Component
 function App() {
+
   const [books, setBooks] = useState([]);
 
   //// Load
@@ -98,7 +101,8 @@ async function handleAddBook(newBook) {
   //// Render
   return (
     <div className="app">
-      <h1>My To-Be-Read List</h1>
+      <h1>The Library</h1>
+      <ToBeReadTracker />
       <ol>
         {books.map(book => (
           <li key={book.id}>
@@ -110,7 +114,7 @@ async function handleAddBook(newBook) {
         ))}
       </ol>
 
-      <h1>Add Book</h1>
+      {/* <h2>Add Book</h2> */}
       <BookForm onAddBook={handleAddBook} />
     </div>
   );

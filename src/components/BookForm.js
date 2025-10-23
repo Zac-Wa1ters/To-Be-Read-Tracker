@@ -49,7 +49,7 @@ export default function BookForm({ onAddBook }) {
         onChange={handleInputChange}
       />
 
-      <button onClick={handleAddBook}>Add Book</button>
+      <div className = "add"><button onClick={handleAddBook}>Add Book</button></div>
     </div>
   );
 }

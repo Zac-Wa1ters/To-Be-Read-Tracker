@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+/* button{
+    color: rgb(244, 225, 191);
+} */
+h1{
+    color:blanchedalmond;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 100px;
+    
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    margin-top: 50px;
+}
+.center-left{
+    color: rgb(59, 33, 14);
+    font-size: 50px;
+    position: absolute;
+    top: 35%;
+    left: 27%;
+}
+.book-number{
+    color: rgb(59, 33, 14);
+    font-size: 30px;
+    position: absolute;
+    top: 410px;
+    left: 19%;
+}
+.edit-button{
+    color: rgb(59, 33, 14);
+    font-size: 10px;
+    position: absolute;
+    top: 275px;
+    left: 43%;
+}
+.add-button{
+    color: rgb(59, 33, 14);
+    font-size: 10px;
+    position: absolute;
+    top: 420px;
+    left: 22%;
+}
