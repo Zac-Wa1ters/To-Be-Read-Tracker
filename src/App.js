@@ -47,35 +47,29 @@ function App() {
   return () => cancelAnimationFrame(animationFrameId);
 }, []);
 
-  //// Add
-async function handleAddBook(newBook) {
-  const tempId = `tmp-${Date.now()}`;
-  const optimisticItem = { id: tempId, ...newBook };
-  setBooks(prev => [...prev, optimisticItem]);
 
+//Reload list when adding to list so page always shows server truth instead of loading optimistcally as before
+
+async function reloadBooks() {
   try {
-    const serverItem = await addBook(newBook);
-    const normalized =
-      serverItem?.data_json?.body ??
-      serverItem?.data_json ??
-      serverItem?.body ??
-      serverItem ?? newBook;
-
-    const finalItem = {
-      id: serverItem?.id ?? tempId,
-      title: normalized.title ?? "",
-      author: normalized.author ?? "",
-      description: normalized.description ?? "",
-    };
-
-    setBooks(prev =>
-      prev.map(b => (b.id === tempId ? finalItem : b))
-    );
-  } catch (error) {
-    console.error("Failed to add book:", error);
-    setBooks(prev => prev.filter(b => b.id !== tempId));
+    const all = await getBooks();
+    setBooks(all);
+  } catch (err) {
+    console.error("Failed to reload books:", err);
   }
 }
+
+
+  //// Add
+async function handleAddBook(newBook) {
+  try {
+    await addBook(newBook);
+    await reloadBooks();
+  } catch (error) {
+    console.error("Failed to add book:", error);
+  }
+}
+
 
   //// Update
   async function handleUpdateBook(bookId) {
@@ -93,14 +87,11 @@ async function handleAddBook(newBook) {
       description: description ?? current.description,
     };
 
-    const optimistic = { ...current, ...patch };
-    setBooks(prev => prev.map(book => (book.id === bookId ? optimistic : book)));
-
     try {
       await updateBook(bookId, patch);
+      await reloadBooks();
     } catch (error) {
       console.error("Failed to update book:", error);
-      setBooks(prev => prev.map(book => (book.id === bookId ? current : book)));
     }
   }
 
@@ -116,7 +107,7 @@ async function handleAddBook(newBook) {
 
     try {
       await deleteBook(bookId);
-      setBooks(prev => prev.filter(b => b.id !== bookId));
+      await reloadBooks();
     } catch (error) {
       console.error("Failed to delete book:", error);
     }
