@@ -22,7 +22,6 @@ function ToBeReadTracker(){
   const [newBook, setNewBook] = useState('');
 
   function handleInputChange(event){
-    setNewBook(event.target.value);
   }
 
   function addBook(){
@@ -47,13 +46,16 @@ function ToBeReadTracker(){
     <div class="center-left">Books</div>
     <img src = {cover}/>
 
-    <div class="edit-button"><button>Edit Page</button></div>
+    {/* <div class="edit-button"><button>Edit Page</button></div> */}
+    {/* <a href = "addbooks" target = "_blank_">
+      <div class="add-button"><button>Add Book</button></div> */}
+    {/* </a> */}
     <div>
-      <input
+      {/* <input
         type = "text"
         placeholder = "Enter a title: "
         value = {newBook}
-        onChange = {handleInputChange}/>
+        onChange = {handleInputChange}/> */}
     </div>
 
     

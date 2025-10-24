@@ -1,5 +1,5 @@
 import './App.css';
-import BookForm from "./components/BookForm";
+import BookForm from "./components/BookForm.js";
 import { useState, useEffect } from "react";
 import { getBooks, addBook, updateBook, deleteBook } from "./BookAPI";
 import ToBeReadTracker from "./components/TBR TRACKER/ToBeReadTracker.jsx";
@@ -22,6 +22,30 @@ function App() {
     }
     fetchBooks();
   }, []);
+   useEffect(() => {
+  const title = document.getElementById("title");
+  if (!title) return;
+
+  let glow = 0;
+  let increasing = true;
+  let animationFrameId;
+
+  function animateGlow() {
+    if (increasing) {
+      glow += 0.5;
+      if (glow >= 10) increasing = false;
+    } else {
+      glow -= 0.5;
+      if (glow <= 0) increasing = true;
+    }
+    title.style.textShadow = `0 0 ${glow}px gold`;
+    animationFrameId = requestAnimationFrame(animateGlow);
+  }
+
+  animateGlow();
+
+  return () => cancelAnimationFrame(animationFrameId);
+}, []);
 
   //// Add
 async function handleAddBook(newBook) {
@@ -101,9 +125,9 @@ async function handleAddBook(newBook) {
   //// Render
   return (
     <div className="app">
-      <h1>The Library</h1>
+      <h1 id= "title">The Library</h1>
       <ToBeReadTracker />
-      <ol>
+      <ol className="book-list">
         {books.map(book => (
           <li key={book.id}>
             <strong>{book.title}</strong> by {book.author}
@@ -119,5 +143,6 @@ async function handleAddBook(newBook) {
     </div>
   );
 }
+
 
 export default App;

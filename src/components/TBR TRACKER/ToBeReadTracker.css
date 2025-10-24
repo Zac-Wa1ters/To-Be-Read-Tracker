@@ -18,7 +18,7 @@ img{
 /* body{
     color: black;
 } */
-.add{
+/* .add{
     color: rgb(59, 33, 14);
     width: 100px;
     height: 60px;
@@ -26,6 +26,13 @@ img{
     position: absolute;
     top: 30%;
     right: 29%;
+} */
+.add-button{
+    color: rgb(59, 33, 14);
+    font-weight: bold;
+    position: absolute;
+    top: 45%;
+    right: 30%;
 }
 .center-left{
     color: rgb(59, 33, 14);
@@ -35,13 +42,7 @@ img{
     top: 35%;
     left: 27%;
 }
-.edit-button{
-    color: rgb(59, 33, 14);
-    font-size: 10px;
-    position: absolute;
-    top: 275px;
-    left: 43%;
-}
+
 .strong{
     word-spacing: 4px;
 }
@@ -53,9 +54,12 @@ ol{
     left: 15%;
     /* word-spacing: 2px; */
 }
-/* .book-form{
-    font-size: 3px;
-    position: absolute;
-    top: 29%;
-    right: 24%;
-} */
+.book-form{
+    display: flex;
+    gap: 10px;
+    top: 45%;
+    right: 30%;
+    margin-top: 50px;
+}
+
+
