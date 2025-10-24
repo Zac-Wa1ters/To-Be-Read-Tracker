@@ -138,7 +138,7 @@ async function handleAddBook(newBook) {
         ))}
       </ol>
 
-      {/* <h2>Add Book</h2> */}
+      <h2>Add Book</h2>
       <BookForm onAddBook={handleAddBook} />
     </div>
   );

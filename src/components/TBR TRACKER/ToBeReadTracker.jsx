@@ -41,7 +41,7 @@ function ToBeReadTracker(){
   }
 
   return(
-  <div className="book-form">
+  <div className="book">
 
     <div class="center-left">Books</div>
     <img src = {cover}/>

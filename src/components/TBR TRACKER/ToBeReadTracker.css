@@ -18,28 +18,20 @@ img{
 /* body{
     color: black;
 } */
-/* .add{
-    color: rgb(59, 33, 14);
-    width: 100px;
-    height: 60px;
-    font-weight: bold;
-    position: absolute;
-    top: 30%;
-    right: 29%;
-} */
-.add-button{
+h2{
     color: rgb(59, 33, 14);
     font-weight: bold;
+    font-size: 50px;
     position: absolute;
-    top: 45%;
-    right: 30%;
+    top: 25%;
+    right: 26%;
 }
 .center-left{
     color: rgb(59, 33, 14);
     font-size: 50px;
     font-weight: bold;
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 27%;
 }
 
@@ -50,16 +42,30 @@ ol{
     color: rgb(59, 33, 14);
     font-size: 14px;
     position: absolute;
-    top: 44%;
+    top: 38%;
     left: 15%;
     /* word-spacing: 2px; */
 }
 .book-form{
+    position: absolute;
+    top: 50%;
     display: flex;
     gap: 10px;
-    top: 45%;
-    right: 30%;
-    margin-top: 55px;
+    flex-direction: column;
+    width: 300px;
+    right: 23%;
+
+
+    /* position: absolute; */
+}
+.add{
+    color: rgb(59, 33, 14);
+    width: 100px;
+    height: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 300%;
+    right: 29%;
 }
 
 
