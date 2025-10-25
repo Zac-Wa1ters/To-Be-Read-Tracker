@@ -21,18 +21,19 @@ img{
 h2{
     color: rgb(59, 33, 14);
     font-weight: bold;
-    font-size: 65px;
+    font-size: 75px;
     position: absolute;
-    top: 25%;
-    right: 23%;
+    top: 30%;
+    right: 21%;
     font-family: 'La Belle Aurore', cursive;
+    gap: 15px;
 }
 .center-left{
     color: rgb(59, 33, 14);
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 27%;
     font-family: 'La Belle Aurore', cursive;
 }
@@ -42,33 +43,69 @@ h2{
 }
 ol{
     color: rgb(59, 33, 14);
-    font-size: 14px;
+    font-size: 15px;
     position: absolute;
-    top: 38%;
-    left: 15%;
+    top: 49%;
+    left: 16%;
     font-family: 'La Belle Aurore', cursive;
     /* word-spacing: 2px; */
 }
 .book-form{
     position: absolute;
-    top: 70%;
+    top: 65%;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-direction: column;
     width: 300px;
     right: 22%;
-
-
     /* position: absolute; */
+
 }
+.book-form input,
+.book-form textarea {
+    height: 60px;
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .add{
     color: rgb(59, 33, 14);
     width: 100px;
     height: 60px;
     font-weight: bold;
     position: absolute;
-    top: 300%;
-    right: 29%;
+    top: 115%;
+    right: 30%;
+}
+.add button{
+    font-size: 25px;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-family: 'La Belle Aurore';
+    background-color: transparent;
+    border: 1px transparent;
+    cursor: pointer;
+
+}
+.book-number{
+    color: rgb(59, 33, 14);
+    font-size: 30px;
+    position: absolute;
+    top: 810px;
+    left: 30.25%;
+    font-weight: bold;
+    font-family: 'La Belle Aurore', cursive;
+}
+.book-number-2{
+    color: rgb(59, 33, 14);
+    font-size: 30px;
+    position: absolute;
+    top: 805px;
+    right: 31.5%;
+    font-weight: bolder;
+    font-family: 'La Belle Aurore', cursive;
 }
 
 

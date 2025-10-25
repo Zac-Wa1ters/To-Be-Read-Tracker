@@ -45,6 +45,8 @@ function ToBeReadTracker(){
 
     <div class="center-left">Books</div>
     <img src = {cover}/>
+    <div class="book-number">1</div>
+    <div class="book-number-2">2</div>
 
     {/* <div class="edit-button"><button>Edit Page</button></div> */}
     {/* <a href = "addbooks" target = "_blank_">
