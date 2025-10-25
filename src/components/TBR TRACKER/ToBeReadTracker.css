@@ -21,10 +21,11 @@ img{
 h2{
     color: rgb(59, 33, 14);
     font-weight: bold;
-    font-size: 50px;
+    font-size: 65px;
     position: absolute;
     top: 25%;
-    right: 26%;
+    right: 23%;
+    font-family: 'La Belle Aurore', cursive;
 }
 .center-left{
     color: rgb(59, 33, 14);
@@ -33,6 +34,7 @@ h2{
     position: absolute;
     top: 30%;
     left: 27%;
+    font-family: 'La Belle Aurore', cursive;
 }
 
 .strong{
@@ -44,16 +46,17 @@ ol{
     position: absolute;
     top: 38%;
     left: 15%;
+    font-family: 'La Belle Aurore', cursive;
     /* word-spacing: 2px; */
 }
 .book-form{
     position: absolute;
-    top: 50%;
+    top: 70%;
     display: flex;
     gap: 10px;
     flex-direction: column;
     width: 300px;
-    right: 23%;
+    right: 22%;
 
 
     /* position: absolute; */
